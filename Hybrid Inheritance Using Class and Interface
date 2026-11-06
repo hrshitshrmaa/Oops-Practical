@@ -1,0 +1,20 @@
+class Machine {
+    void start() {
+        System.out.println("Machine is starting");
+    }
+}
+interface Printable {
+    void print();
+}
+class Printer extends Machine implements Printable {
+    public void print() {
+        System.out.println("Printer is printing");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Printer p = new Printer();
+        p.start();
+        p.print();
+    }
+}
