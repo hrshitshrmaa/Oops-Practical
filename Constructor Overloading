@@ -1,0 +1,46 @@
+class Product {
+    String name;
+    double price;
+    int quantity;
+
+    Product() {
+        name = "Unknown";
+        price = 0;
+        quantity = 0;
+    }
+    Product(String n) {
+        name = n;
+        price = 0;
+        quantity = 0;
+    }
+    Product(String n, double p) {
+        name = n;
+        price = p;
+        quantity = 0;
+    }
+    Product(String n, double p, int q) {
+        name = n;
+        price = p;
+        quantity = q;
+    }
+    double totalCost() {
+        return price * quantity;
+    }
+    void display() {
+        System.out.println(name + " " + price + " " + quantity);
+        System.out.println("Total Cost: " + totalCost());
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Product p1 = new Product();
+        Product p2 = new Product("Pen");
+        Product p3 = new Product("Book", 50);
+        Product p4 = new Product("Bag", 500, 2);
+
+        p1.display();
+        p2.display();
+        p3.display();
+        p4.display();
+    }
+}
