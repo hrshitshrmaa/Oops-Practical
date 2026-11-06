@@ -1,0 +1,30 @@
+class BankAccount {
+    private double balance = 5000;
+
+    void deposit(double amount) {
+        if (amount > 0)
+            balance += amount;
+        else
+            System.out.println("Invalid deposit");
+    }
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance)
+            balance -= amount;
+        else
+            System.out.println("Invalid withdrawal");
+    }
+    double getBalance() {
+        return balance;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        BankAccount b = new BankAccount();
+
+        b.deposit(1000);
+        b.withdraw(2000);
+        b.withdraw(10000);
+
+        System.out.println("Balance: " + b.getBalance());
+    }
+}
