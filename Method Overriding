@@ -1,0 +1,24 @@
+class Employee {
+    void calculatePay() {
+        System.out.println("Employee salary is 20000");
+    }
+}
+class Manager extends Employee {
+    void calculatePay() {
+        System.out.println("Manager salary is 50000");
+    }
+}
+class Developer extends Employee {
+    void calculatePay() {
+        System.out.println("Developer salary is 30000");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Employee e;
+        e = new Manager();
+        e.calculatePay();
+        e = new Developer();
+        e.calculatePay();
+    }
+}
